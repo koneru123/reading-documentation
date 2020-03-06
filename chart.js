@@ -1,13 +1,12 @@
 // Your code here!
 var chart = c3.generate({
   data: {
-      // iris data from R
       columns: [
-        ['sleep', 8],
-        ['eat', 3],
-        ['code', 7],
-        ['relax', 2],
-        ['other', 4]
+        ['sleep', value],
+        ['eat', value],
+        ['code', value],
+        ['relax', value],
+        ['other', value]
       ],
       type: 'pie',
       colors: {
