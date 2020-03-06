@@ -9,7 +9,7 @@ var chart = c3.generate({
         ['relax', 2],
         ['other', 4]
       ],
-      type : 'pie',
+      type: 'pie',
       colors: {
         sleep: '#D81159',
         eat: '#8F2D56',
@@ -17,8 +17,16 @@ var chart = c3.generate({
         relax: '#FBB13C',
         other: '#726DA8'
       },
-      onclick: function (d, i) { console.log("onclick", d, i); },
-      onmouseover: function (d, i) { console.log("onmouseover", d, i); },
-      onmouseout: function (d, i) { console.log("onmouseout", d, i); }
-  }
+    },
+    pie: {
+      label: {
+        format: function (value, ratio, id) {
+          return `${value} hours`;
+        }
+      }
+    },
+    onclick: function (d, i) { console.log("onclick", d, i); },
+    onmouseover: function (d, i) { console.log("onmouseover", d, i); },
+    onmouseout: function (d, i) { console.log("onmouseout", d, i); }
 });
+
